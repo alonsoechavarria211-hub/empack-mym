@@ -231,7 +231,7 @@ var C=[["Pollocoa","pollocoa"],["Friko","friko"],["3 Castillos","3castillos"],["
 var t=document.getElementById("track"),h="";
 for(var r=0;r<4;r++){C.forEach(function(c){h+='<div class="cl" data-f="'+c[1]+'" data-n="'+c[0]+'">'+c[0]+'</div>'})}
 t.innerHTML=h;
-C.forEach(function(c){var i=new Image();i.onload=function(){document.querySelectorAll('[data-f="'+c[1]+'"]').forEach(function(d){d.innerHTML="";i=i.cloneNode();i.alt=c[0]+", cliente de Empack M&M";d.appendChild(i)})};i.src="logos/"+c[1]+".png"});
+C.forEach(function(c){var i=new Image();i.onload=function(){document.querySelectorAll('[data-f="'+c[1]+'"]').forEach(function(d){d.innerHTML="";i=i.cloneNode();i.alt=c[0]+", cliente de Empack M&M";d.appendChild(i)})};i.src="Logos/"+c[1]+".png"});
 // Contadores
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,n=+el.dataset.n,p=el.dataset.p,s=null;
 function st(ts){s=s||ts;var k=Math.min((ts-s)/1200,1);el.textContent=p+Math.round(n*k);if(k<1)requestAnimationFrame(st)}requestAnimationFrame(st)})});
